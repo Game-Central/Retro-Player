@@ -52,6 +52,12 @@
                 <pre id="av-info"></pre>
             </div>
         </div>
+        <script>
+          if ((new window.URL(window.location.href)).searchParams.get('rom') != null) {
+              var rom = document.getElementById('chooser').value;
+              rom = "/roms/" + (new window.URL(window.location.href)).searchParams.get('rom');
+          }
+        </script>
         <script src="jspm_packages/system.js"></script>
         <script src="config.js"></script>
         <script src="build.js"></script>
