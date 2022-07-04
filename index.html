@@ -54,8 +54,8 @@
         </div>
         <script>
           if ((new window.URL(window.location.href)).searchParams.get('rom') != null) {
-              var rom = document.getElementById('chooser').value;
-              var file = "https://game-central.github.io/Retro-Player/roms/" + (new window.URL(window.location.href)).searchParams.get('rom');
+              var rom = document.getElementById('chooser');
+              rom.value = "https://game-central.github.io/Retro-Player/roms/" + (new window.URL(window.location.href)).searchParams.get('rom');
           }
         </script>
         <script src="jspm_packages/system.js"></script>
