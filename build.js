@@ -12973,9 +12973,7 @@ System.registerDynamic('index.coffee!github:forresto/system-coffee@master.js', [
 
   savechooser.addEventListener('change', function () {
     var file, reader;
-    if ((new window.URL(window.location.href)).searchParams.get('rom') != null) {
-      file = "https://game-central.github.io/Retro-Player/roms/" + (new window.URL(window.location.href)).searchParams.get('rom');
-    } else {file = this.files[0];}
+    file = this.files[0];
     if (!file instanceof Blob) {
       return;
     }
