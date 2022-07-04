@@ -54,22 +54,9 @@
         </div>
         <script>
           if ((new window.URL(window.location.href)).searchParams.get('rom') != null) {
-              a("/roms/" + (new window.URL(window.location.href)).searchParams.get('rom'));              
+              var rom = document.getElementById('chooser').value;
+              var file = "https://game-central.github.io/Retro-Player/roms/" + (new window.URL(window.location.href)).searchParams.get('rom');
           }
-            function a(loc) {
-    var file, reader;
-    file = loc;
-    if (!file instanceof Blob) {
-      return;
-    }
-    draghint.classList.add('hidden');
-    reader = new FileReader();
-    reader.addEventListener('load', function (event) {
-      retro.core.unserialize(new Uint8Array(reader.result));
-      return window.resume();
-    });
-    return reader.readAsArrayBuffer(file);
-  }
         </script>
         <script src="jspm_packages/system.js"></script>
         <script src="config.js"></script>
